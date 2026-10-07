@@ -2,7 +2,18 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import pandas as pd
+# Cabecera con Logotipo y Título
+col_logo, col_titulo = st.columns([1, 4])  # Proporción de ancho
 
+with col_logo:
+    try:
+        st.image("Logo_CT_letras.png", width=120)
+    except Exception:
+        pass
+
+with col_titulo:
+    st.title("🌱 Análisis de Cobertura Vegetal")
+    st.write("Algoritmo Canopeo - Segmentación por color")
 st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
 
 st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo CT - Multi-Imagen)")
