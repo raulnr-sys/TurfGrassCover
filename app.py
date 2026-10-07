@@ -13,7 +13,7 @@ with col_logo:
 
 with col_titulo:
     st.title("🌱 Civil Turf Grass Cover")
-    st.write("Algoritmo Canopeo - Segmentación por color")
+    st.write("Aplicación para el cálculo de cobertura vegetal en césped")
 st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
 
 st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo CT - Multi-Imagen)")
