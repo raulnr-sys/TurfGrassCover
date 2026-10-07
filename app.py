@@ -12,7 +12,7 @@ with col_logo:
         pass
 
 with col_titulo:
-    st.title("🌱 Análisis de Cobertura Vegetal")
+    st.title("🌱 Civil Turf Grass Cover")
     st.write("Algoritmo Canopeo - Segmentación por color")
 st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
 
