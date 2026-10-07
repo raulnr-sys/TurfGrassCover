@@ -12,7 +12,7 @@ with col_logo:
         pass
 
 with col_titulo:
-    st.title("🌱 Civil Turf Grass Cover")
+    st.title("🌱 CivilTurf Grass Cover")
     st.write("Aplicación para el cálculo de cobertura vegetal en césped")
 st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
 
