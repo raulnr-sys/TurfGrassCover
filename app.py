@@ -16,7 +16,7 @@ with col_titulo:
     st.write("Aplicación para el cálculo de cobertura vegetal en césped")
 st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
 
-st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo CT - Multi-Imagen)")
+st.title("🌱 Análisis de Cobertura Vegetal por imágen en césped")
 st.write("Carga una o varias imágenes para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
 
 # Configuración de parámetros CT en la barra lateral
