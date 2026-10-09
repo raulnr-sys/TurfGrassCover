@@ -31,7 +31,7 @@ if "uploader_key" not in st.session_state:
     st.session_state["uploader_key"] = 0
 
 st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo Canopeo)")
-st.write("Carga una o varias imágenes para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
+st.write("INSTRUCCIONES DE USO: Carga o toma sobre el terreno una o varias imágenes a 1m de altura para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
 
 # Botón para limpiar fotos y realizar una nueva medición rápidamente
 col_info, col_reset = st.columns([3, 1])
