@@ -19,6 +19,20 @@ st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Ima
 #st.title("🌱 Análisis de Cobertura Vegetal por imágen en césped")
 st.write("Carga una o varias imágenes para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
 
+import streamlit as st
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+import pandas as pd
+
+st.set_page_config(page_title="Cálculo Canopeo - Cobertura Vegetal", layout="wide")
+
+# Control de estado para reiniciar el cargador de archivos en móviles
+if "uploader_key" not in st.session_state:
+    st.session_state["uploader_key"] = 0
+
+st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo Canopeo)")
+st.write("Carga una o varias imágenes para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
+
 # Botón para limpiar fotos y realizar una nueva medición rápidamente
 col_info, col_reset = st.columns([3, 1])
 with col_reset:
@@ -26,8 +40,8 @@ with col_reset:
         st.session_state["uploader_key"] += 1
         st.rerun()
 
-# Configuración de parámetros CT en la barra lateral
-st.sidebar.header("Parámetros TurfGrassCover")
+# Configuración de parámetros Canopeo en la barra lateral
+st.sidebar.header("Parámetros Canopeo")
 p1 = st.sidebar.slider("P1 (Límite R/G)", min_value=0.50, max_value=1.50, value=0.95, step=0.01)
 p2 = st.sidebar.slider("P2 (Límite B/G)", min_value=0.50, max_value=1.50, value=0.95, step=0.01)
 p3 = st.sidebar.slider("P3 (Mínimo 2G - R - B)", min_value=0.0, max_value=100.0, value=20.0, step=1.0)
