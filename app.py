@@ -24,13 +24,13 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import pandas as pd
 
-st.set_page_config(page_title="Cálculo Canopeo - Cobertura Vegetal", layout="wide")
+st.set_page_config(page_title="Cálculo de Cobertura Vegetal", layout="wide")
 
 # Control de estado para reiniciar el cargador de archivos en móviles
 if "uploader_key" not in st.session_state:
     st.session_state["uploader_key"] = 0
 
-st.title("🌱 Análisis de Cobertura Vegetal (Algoritmo Canopeo)")
+st.title("🌱 Análisis de Cobertura Vegetal Civil Turf")
 st.write("INSTRUCCIONES DE USO: Carga o toma sobre el terreno una o varias imágenes a 1m de altura para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
 
 # Botón para limpiar fotos y realizar una nueva medición rápidamente
