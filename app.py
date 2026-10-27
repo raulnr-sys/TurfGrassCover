@@ -12,9 +12,9 @@ with col_logo:
         pass
 
 with col_titulo:
-    st.title("🌱 CivilTurf GrassCoverCalc")
+    st.title("🌱 GrassCoverCalc by CivilTurf ")
     st.write("Aplicación para el cálculo de cobertura vegetal en césped")
-st.set_page_config(page_title="CivilTurfGrassCover - Cobertura Vegetal Multi-Imagen", layout="wide")
+st.set_page_config(page_title="GrassCover by CivilTurf - Cobertura Vegetal Multi-Imagen", layout="wide")
 
 #st.title("🌱 Análisis de Cobertura Vegetal por imágen en césped")
 st.write("Carga una o varias imágenes para procesar de forma individual o en lote mediante las relaciones de color R/G, B/G y Exceso de Verde (ExG).")
@@ -162,7 +162,7 @@ if uploaded_files:
         st.download_button(
             label="📄 Descargar Informe CSV",
             data=csv,
-            file_name="informe_cobertura_canopeo.csv",
+            file_name="informe_GrassCover_by_CivilTurf.csv",
             mime="text/csv",
         )
     with col_res2:
